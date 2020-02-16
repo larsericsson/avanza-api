@@ -16,7 +16,7 @@ async function initPublic() {
 async function init() {
   try {
     avanza.session = require("../session.json");
-  } catch {}
+  } catch (e) {}
   if (!avanza.isAuthenticated) {
     try {
       await avanza.authenticate(require("../credential.json"));
